@@ -1,0 +1,89 @@
+@use "variables" as *;
+@use "base" as *;
+
+/* =========================
+   Base (Mobile First / iPhone 기준)
+========================= */
+
+html {
+  /* iOSのズーム対策 */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  /* スクロール安定 */
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* iPhone基準で見やすい文字 */
+  font-family: system-ui, -apple-system, "SF Pro Display",
+    "Hiragino Sans", "Helvetica Neue", sans-serif;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: $text;
+  background: $bg;
+
+  /* 重要：100vh問題対策 */
+  min-height: 100vh;
+  min-height: 100dvh; /* Safari対応（動的viewport） */
+
+  /* iOSの余白崩れ防止 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   App Root
+========================= */
+
+#app {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   Reset系
+========================= */
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   Tap最適化（iPhone重要）
+========================= */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   フォームズーム防止
+========================= */
+
+input,
+textarea,
+select {
+  font-size: 16px; /* iOSズーム防止の鉄則 */
+}

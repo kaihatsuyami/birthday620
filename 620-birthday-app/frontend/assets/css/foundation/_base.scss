@@ -1,0 +1,10 @@
+:root {
+    --color-primary: #FF69B4
+    --color-primary-contrast: #ffffff
+    --colorprimary-dark: #D15286
+}
+@mixin centering{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
