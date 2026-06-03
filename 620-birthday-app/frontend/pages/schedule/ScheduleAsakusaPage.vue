@@ -20,7 +20,7 @@ const schedule = [
     date: "6/20",
     items: [
       { time: "12:00", event: "start\n@Lounge" },
-      { time: "15:00", event: "checkin\n@RichmondHotelPremierScholeTOKYO" },
+      { time: "15:00", event: "checkin\n@Richmond Hotel Premier Schole" },
       { time: "xx:xx", event: "Dinner\n＠Takeout or Delivery" },
       { time: "xx:xx", event: "Nightcap\n＠Lounge" },
     ],

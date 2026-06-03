@@ -3,9 +3,12 @@
     <AppHeader />
     <div class="p-dashboard__buttons">
       <SquareButton class="p-dashboard__button--getready" @click="goTo('/getready')">GET READY</SquareButton>
-      <SquareButton class="p-dashboard__button--schedule" coming-soon @click="goTo('/schedule')">SCHEDULE</SquareButton>
+      <SquareButton class="p-dashboard__button--schedule" @click="goTo('/schedule')">SCHEDULE</SquareButton>
+      <SquareButton class="p-dashboard__button--ticket" @click="goTo('/ticket')">DAY2 TICKET</SquareButton>
+      <SquareButton class="p-dashboard__button--other" @click="goTo('/other')">OTHER</SquareButton>
+      <!-- <SquareButton class="p-dashboard__button--schedule" coming-soon @click="goTo('/schedule')">SCHEDULE</SquareButton>
       <SquareButton class="p-dashboard__button--ticket" coming-soon @click="goTo('/ticket')">DAY2 TICKET</SquareButton>
-      <SquareButton class="p-dashboard__button--other" coming-soon @click="goTo('/other')">OTHER</SquareButton>
+      <SquareButton class="p-dashboard__button--other" coming-soon @click="goTo('/other')">OTHER</SquareButton> -->
     </div>
   </div>
 </template>

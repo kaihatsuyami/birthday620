@@ -11,6 +11,9 @@ html {
 
   /* スクロール安定 */
   height: 100%;
+
+  /* 横スクロール禁止 */
+  overflow-x: hidden;
 }
 
 body {
@@ -26,6 +29,10 @@ body {
 
   color: $text;
   background: $bg;
+
+  /* 横はみ出し防止 */
+  overflow-x: hidden;
+  overflow-wrap: break-word;
 
   /* 重要：100vh問題対策 */
   min-height: 100vh;

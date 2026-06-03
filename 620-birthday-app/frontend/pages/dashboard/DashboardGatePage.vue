@@ -17,7 +17,7 @@
         <span class="bg-wrap"><span class="inn"> HAPPY </span></span><br>
         <span class="bg-wrap"><span class="inn"> 25TH </span></span><br>
         <span class="bg-wrap"><span class="inn"> BIRTHDAY </span></span><br>
-        <span class="bg-wrap"><span class="inn"> NAOYA KUN♡ </span></span>
+        <span class="bg-wrap"><span class="inn"> NAOYAkun♡ </span></span>
       </div>
     </div>
   </div>
@@ -54,6 +54,7 @@ const onSubmit = async (password) => {
 </script>
 
 <style scoped>
+
 /* ---- 全画面intro ---- */
 .intro {
   position: fixed;
@@ -61,7 +62,7 @@ const onSubmit = async (password) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #0a0a0a;
+  background: #6e6067;
   overflow: hidden;
 }
 
@@ -89,7 +90,7 @@ const onSubmit = async (password) => {
 }
 
 
-/* ---- bgアニメーション（ユーザー提供CSSそのまま） ---- */
+/* ---- bgアニメーション ---- */
 .bg {
   text-align: center;
 }
@@ -98,13 +99,11 @@ const onSubmit = async (password) => {
   position: relative;
   display: inline-block;
   margin-top: 5px;
-  padding: 0 20px;
-
 }
 
 .bg.is-animated .bg-wrap::before {
   animation: bg 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  background: linear-gradient(to right, #D15286 0%, #FF69B4 50%, #FFADD2 100%);
+  background: linear-gradient(to right, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
   content: "";
   position: absolute;
   top: 0;
@@ -115,11 +114,11 @@ const onSubmit = async (password) => {
 }
 
 .bg .bg-wrap .inn {
-  color: #fff;
+  color: var(--color-primary-contrast);
   display: inline-block;
-  font-size: 120px;
+  font-size: 60px;
   font-weight: bold;
-  padding: rSize(5) rSize(15);
+  padding: 3px 10px;
   position: relative;
   z-index: 1;
 }
