@@ -1,3 +1,0 @@
-<template>
-    TICKET
-</template>

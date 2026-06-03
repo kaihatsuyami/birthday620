@@ -1,7 +1,7 @@
 <template>
   <input
     :value="modelValue"
-    type="password"
+    type="text"
     @input="$emit('update:modelValue', $event.target.value)"
   />
 </template>

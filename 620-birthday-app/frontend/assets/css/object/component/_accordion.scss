@@ -1,0 +1,45 @@
+.c-accordion__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  text-align: left;
+}
+
+.c-accordion__title {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-vivid-orange);
+}
+
+.c-accordion__icon {
+  font-size: 12px;
+  color: #999;
+  transition: transform 200ms;
+
+  &--open {
+    transform: rotate(180deg);
+  }
+}
+
+.c-accordion__body {
+  overflow: hidden;
+}
+
+.accordion-enter-active,
+.accordion-leave-active {
+  transition: opacity 200ms, transform 200ms;
+  transform-origin: top;
+}
+
+.accordion-enter-from,
+.accordion-leave-to {
+  opacity: 0;
+  transform: scaleY(0.95);
+}

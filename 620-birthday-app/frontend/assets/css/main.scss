@@ -3,16 +3,23 @@
 ========================= */
 @use 'foundation/_base.scss';
 @use 'foundation/_default.scss';
-@use 'foundation/_variables.scss';
 
 /* =========================
    layout
 ========================= */
+@use 'layout/_header.scss';
 
 
 
 /* =========================
    object
 ========================= */
-@use 'object/project/_passwordinput.scss';
-@use 'object/project/_passwordsubmit.scss';
+@use 'object/component/_gate.scss';
+@use 'object/component/_validation.scss';
+@use 'object/component/_button-square.scss';
+@use 'object/component/_accordion.scss';
+@use 'object/project/_password.scss';
+@use 'object/project/_dashboard.scss';
+@use 'object/project/_getready.scss';
+@use 'object/project/_schedule.scss';
+@use 'object/project/_ticket.scss';

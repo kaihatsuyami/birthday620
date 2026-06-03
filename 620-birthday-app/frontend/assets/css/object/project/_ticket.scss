@@ -1,0 +1,27 @@
+.p-select {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-select__title {
+  font-family: Inter, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+  padding: 0 20px 36px;
+}
+
+.p-select__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.p-select__button--car   { background: var(--color-vivid-orange); }
+.p-select__button--train { background: var(--color-vivid-pink); }
+.p-select__button--sunny { background: var(--color-vivid-green); }
+.p-select__button--rainy { background: var(--color-vivid-blue); }

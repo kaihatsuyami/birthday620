@@ -16,4 +16,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./frontend', import.meta.url))
     },
   },
+  
 })

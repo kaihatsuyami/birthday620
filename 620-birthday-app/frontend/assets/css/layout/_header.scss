@@ -1,0 +1,43 @@
+.l-header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.l-header__back {
+  position: absolute;
+  left: 16px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.l-header__title {
+  font-family: Inter, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: inherit;
+  margin: 0;
+}
+
+.l-header--getready { background: var(--color-vivid-orange); color: #fff; border-bottom: none; }
+.l-header--schedule { background: var(--color-vivid-pink);   color: #fff; border-bottom: none; }
+.l-header--ticket   { background: var(--color-vivid-blue);   color: #fff; border-bottom: none; }
+.l-header--other    { background: var(--color-vivid-green);  color: #fff; border-bottom: none; }

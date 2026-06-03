@@ -1,7 +1,8 @@
 <template>
   <button
     class="square-button"
-    :disabled="disabled"
+    :class="{ 'is-coming-soon': comingSoon }"
+    :disabled="disabled || comingSoon"
     @click="handleClick"
   >
     <slot />
@@ -11,6 +12,10 @@
 <script setup>
 const props = defineProps({
   disabled: {
+    type: Boolean,
+    default: false,
+  },
+  comingSoon: {
     type: Boolean,
     default: false,
   },
