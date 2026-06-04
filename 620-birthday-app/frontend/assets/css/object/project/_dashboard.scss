@@ -1,7 +1,6 @@
 .p-dashboard {
   width: 100%;
   min-height: 100vh;
-  background: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -9,11 +8,10 @@
 .p-dashboard__buttons {
   display: flex;
   flex-direction: column;
-  padding-bottom: 48px;
   margin-top: auto;
 }
 
-.p-dashboard__button--getready { background: var(--color-vivid-orange); }
-.p-dashboard__button--schedule { background: var(--color-vivid-pink); }
-.p-dashboard__button--ticket   { background: var(--color-vivid-blue); }
-.p-dashboard__button--other    { background: var(--color-vivid-green); }
+.p-dashboard__button--getready { background: var(--color-primary-dark); }
+.p-dashboard__button--schedule { background: var(--color-primary); }
+.p-dashboard__button--ticket   { background: var(--color-primary-secondary); }
+.p-dashboard__button--other    { background: var(--color-primary-light); }

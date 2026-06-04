@@ -2,7 +2,7 @@
   <div class="p-getready">
     <AppHeader variant="getready" />
 
-    <AccordionSection title="宿泊先">
+    <AccordionSection class="anim-box popup" :class="{ 'is-animated': isAnimated2 }" title="宿泊先">
       <div class="p-getready__block">
         <p class="p-getready__block-title">ホテル</p>
         <ul class="p-getready__list">
@@ -14,12 +14,11 @@
           アクセス【電車】
         </p>
         <ul class="p-getready__list">
-          <li>
+          <li>押上駅 徒歩1分<br>
           <a href="https://richmondhotel.jp/tokyo-oshiage/access/" target="_blank" rel="noopener">公式サイト</a>
           </li>
         </ul>
-        <p class="p-getready__access-note">押上駅 徒歩1分</p>
-
+        
         <div class="p-getready__routes">
           <div v-for="route in trainRoutes" :key="route.label" class="p-getready__route">
             <p class="p-getready__route-label">{{ route.label }}（{{ route.time }}）</p>
@@ -37,7 +36,7 @@
         </ul>
         <div class="p-getready__routes">
           <div class="p-getready__route">
-            <p class="p-getready__route-label">ルート 約1時間45分</p>
+            <p class="p-getready__route-label">ルート（約1時間45分）</p>
             <ol class="p-getready__steps">
               <li v-for="(step, i) in carRoute" :key="i" class="p-getready__step">
                 <span class="p-getready__step-station">{{ step.station }}</span>
@@ -49,7 +48,7 @@
       </div>
     </AccordionSection>
 
-    <AccordionSection title="ホテルアメニティ">
+    <AccordionSection class="anim-box popup" :class="{ 'is-animated': isAnimated3 }" title="ホテルアメニティ">
       <div class="p-getready__block">
         <p class="p-getready__block-title">客室備品</p>
         <ul class="p-getready__list">
@@ -71,11 +70,23 @@
       </div>
     </AccordionSection>
 
-    <AccordionSection title="持ってきてほしいもの">
+    <AccordionSection class="anim-box popup" :class="{ 'is-animated': isAnimated4 }" title="持ってきてほしいもの">
       <div class="p-getready__block">
-        <p class="p-getready__block-title">お洋服</p>
+        <p class="p-getready__block-title">共通</p>
         <ul class="p-getready__list">
-          <li v-for="item in clothingItems" :key="item">{{ item }}</li>
+          <li v-for="item in shareItems" :key="item">{{ item }}</li>
+        </ul>
+      </div>
+      <div class="p-getready__block">
+        <p class="p-getready__block-title">車の場合</p>
+        <ul class="p-getready__list">
+          <li v-for="item in carItems" :key="item">{{ item }}</li>
+        </ul>
+      </div>
+      <div class="p-getready__block">
+        <p class="p-getready__block-title">電車の場合</p>
+        <ul class="p-getready__list">
+          <li v-for="item in trainItems" :key="item">{{ item }}</li>
         </ul>
       </div>
     </AccordionSection>
@@ -83,8 +94,25 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
 import AppHeader from "@/shared/AppHeader.vue";
 import AccordionSection from "@/shared/AccordionSection.vue";
+
+const isAnimated2 = ref(false);
+const isAnimated3 = ref(false);
+const isAnimated4 = ref(false);
+
+const startButtonAnimations = () => {
+  setTimeout(() => { isAnimated2.value = true; }, 200);
+  setTimeout(() => { isAnimated3.value = true; }, 300);
+  setTimeout(() => { isAnimated4.value = true; }, 400);
+};
+
+onMounted(() => {
+    setTimeout(() => {
+      startButtonAnimations();
+    }, 100);
+});
 
 const roomAmenities = [
   "液晶TV",
@@ -124,19 +152,21 @@ const deskAmenities = [
   "キッズアメニティ",
 ];
 
-const clothingItems = [
+const carItems = [
   "紫のTシャツ",
   "黒パンツ",
-  "ライター",
 ];
 
+const trainItems = [
+
+]
+const shareItems = [
+  "ライター",
+
+]
+
 const carRoute = [
-  { station: "おうち", line: "一般道" },
-  { station: "水戸南IC", line: "北関東自動車道" },
-  { station: "友部JCT", line: "常磐自動車道" },
-  { station: "三郷JCT", line: "首都高速6号三郷線" },
-  { station: "小菅JCT", line: "首都高速中央環状線" },
-  { station: "堀切JCT", line: "首都高速6号向島線" },
+  { station: "おうち", line: "高速" },
   { station: "向島出口", line: "一般道" },
   { station: "ホテル", line: null },
 ];
@@ -146,7 +176,7 @@ const trainRoutes = [
     label: "ルート①",
     time: "約2時間",
     steps: [
-      { station: "勝田", line: "JR" },
+      { station: "最寄り駅", line: "JR" },
       { station: "上野", line: "東京メトロ銀座線" },
       { station: "浅草", line: "東京メトロ浅草線" },
       { station: "押上", line: null },
@@ -156,7 +186,7 @@ const trainRoutes = [
     label: "ルート②",
     time: "約2時間",
     steps: [
-      { station: "勝田", line: "JR" },
+      { station: "最寄り駅", line: "JR" },
       { station: "柏", line: "常磐線" },
       { station: "北千住", line: "東京スカイツリーライン" },
       { station: "押上", line: null },
@@ -166,71 +196,31 @@ const trainRoutes = [
 </script>
 <style lang="scss" scoped>
 a {
-  color: #007bff;
+  color: var(--color-primary-shadow);
   text-decoration: none;
+  text-decoration: underline;
 }
 
-.p-getready__access-note {
-  font-size: 24px;
-  color: #666;
-  margin-bottom: 12px;
+.anim-box.popup {
+  opacity: 0;
+  transform: translateY(40px) scale(0.8);
 }
+.anim-box.popup.is-animated {
+  animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+ 
+@keyframes popup {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}
+ 
 
-.p-getready__routes {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.p-getready__route-label {
-  font-size: 24px;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-.p-getready__steps {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.p-getready__step {
-  display: flex;
-  flex-direction: column;
-  padding-left: 26px;
-  position: relative;
-}
-
-/* 駅の●ドット */
-.p-getready__step::before {
-  content: "●";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 13px;
-  color: var(--color-vivid-orange);
-}
-
-/* 駅間の縦線 */
-.p-getready__step:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 18px;
-  bottom: -4px;
-  width: 2px;
-  background: #ddd;
-}
-
-.p-getready__step-station {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.4;
-}
-
-.p-getready__step-line {
-  font-size: 24px;
-  color: #888;
-  padding: 4px 0 8px;
-}
 </style>

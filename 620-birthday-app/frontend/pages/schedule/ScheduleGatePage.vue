@@ -23,8 +23,8 @@ const step = ref("input");
 const errorMessage = ref("");
 
 const destinations = {
-  sanrio: "/schedule/sanrio",
-  asakusa: "/schedule/asakusa",
+  kuromi: "/schedule/sanrio",
+  kaminari: "/schedule/asakusa",
   aquarium: "/schedule/aquarium",
 };
 
