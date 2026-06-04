@@ -1,0 +1,1 @@
+import{h as e,p as t,u as n}from"./index-D59OB9Lc.js";import{t as r}from"./AppHeader-CYSf5Xk_.js";var i={__name:`OtherPage`,setup(i){return(i,a)=>(e(),n(`div`,null,[t(r,{variant:`other`})]))}};export{i as default};

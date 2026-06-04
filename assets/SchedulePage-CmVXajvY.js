@@ -1,4 +1,4 @@
-import{a as e,g as t,h as n,n as r,p as i,s as a,u as o}from"./index-Bbgb-u1B.js";import{t as s}from"./AppHeader-CJs7_CmD.js";import{t as c}from"./ScheduleGroup-MYZyqgOD.js";var l={class:`p-schedule`},u={__name:`SchedulePage`,setup(u){let d=r(),f=e=>{d.push(e)},p=[{date:`Day1`,items:[{time:`12:00`,event:`start
+import{a as e,g as t,h as n,n as r,p as i,s as a,u as o}from"./index-D59OB9Lc.js";import{t as s}from"./AppHeader-CYSf5Xk_.js";import{t as c}from"./ScheduleGroup-DSvij0vx.js";var l={class:`p-schedule`},u={__name:`SchedulePage`,setup(u){let d=r(),f=e=>{d.push(e)},p=[{date:`Day1`,items:[{time:`12:00`,event:`start
 @Lounge in Hotel`},{time:`15:00`,event:`checkin
 @Richmond Hotel Premier Schole`},{time:`xx:xx`,event:`Dinner
 ＠Takeout or Delivery`},{time:`xx:xx`,event:`Nightcap
