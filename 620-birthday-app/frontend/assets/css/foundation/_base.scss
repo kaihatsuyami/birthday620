@@ -1,8 +1,6 @@
 @use "sass:math";
 
 $design-width: 393; // iPhone 16 / Figmaのデザイン幅（px）
-$bg: #f7f7fb;
-$text: #222;
 
 @function rSize($value) {
   $ratio: math.div($value, $design-width);
@@ -17,15 +15,16 @@ $text: #222;
 }
 
 :root {
-  --color-primary: #ff6ab5;
-  --color-primary-contrast: #ffffff;
+  --color-primary: #f83495;
+  --color-primary-secondary: #FA7FBD;
+  --color-primary-light: #FDC9E3;
   --color-primary-dark: #D15286;
-  --color-primary-light: #ffcfe4;
-  --color-vivid-orange: #F55030;
-  --color-vivid-orange-dark: #D14428;
-  --color-vivid-pink: #E01F80;
-  --color-vivid-blue: #0073E6;
-  --color-vivid-green: #38C050;
+  --color-primary-shadow: #8F054A;
+  --color-primary-contrast: #f8f8f8;
+  --color-bg: #d2bec3;
+  --color-text: #f8f8f8;
+  --color-text-dark: #2E2B2C;
+  --color-purple: #6b4da8;
 }
 
 @mixin centering {

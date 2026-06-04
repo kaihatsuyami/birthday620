@@ -1,6 +1,5 @@
 .p-getready {
   min-height: 100vh;
-  background: #fff;
 }
 
 .p-getready__block {
@@ -10,35 +9,34 @@
 .p-getready__block-title {
   position: relative;
   display: inline-block;
-  margin: 0 0 30px 30px;
-  padding: 10px 24px 10px 20px;
+  margin: 14px 0 10px 22px;
+  padding: 6px 16px 6px 12px;
   font-family: Inter, sans-serif;
-  font-size: 30px;
+  font-size: 18px;
   font-weight: bold;
-  color: #fff;
-  background: var(--color-vivid-orange);
+  background: var(--color-primary-dark);
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   &::before {
     position: absolute;
     top: 0;
-    left: -30px;
+    left: -22px;
     content: '';
-    border-width: 32px 30px 32px 0;
+    border-width: 20px 22px 20px 0;
     border-style: solid;
-    border-color: transparent var(--color-vivid-orange) transparent transparent;
+    border-color: transparent var(--color-primary-dark) transparent transparent;
   }
 
   &::after {
     position: absolute;
-    top: calc(50% - 8px);
-    left: -10px;
-    width: 16px;
-    height: 16px;
+    top: calc(50% - 5px);
+    left: -8px;
+    width: 10px;
+    height: 10px;
     content: '';
+    background: var(--color-primary-contrast);
     border-radius: 50%;
-    background: #fff;
   }
 }
 
@@ -48,10 +46,10 @@
   padding: 0;
 
   li {
-    font-size: 28px;
-    color: #333;
+    font-size: 20px;
+    color: var(--color-text-dark);
     padding: 10px 0 10px 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--color-primary-contrast);
 
     &:last-child {
       border-bottom: none;
@@ -61,10 +59,10 @@
 
 .p-getready__note {
   padding: 16px 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-primary-contrast);
 
   p {
-    font-size: 28px;
+    font-size: 20px;
     color: #555;
     line-height: 1.7;
     margin: 0 0 12px;
@@ -73,4 +71,67 @@
       margin: 0;
     }
   }
+}
+
+.p-getready__access-note {
+  font-size: 20px;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+}
+
+.p-getready__routes {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-getready__route-label {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.p-getready__steps {
+  list-style: none;
+  padding: 0 0 16px;
+  margin: 0;
+}
+
+.p-getready__step {
+  display: flex;
+  flex-direction: column;
+  padding-left: 26px;
+  position: relative;
+}
+
+/* 駅の●ドット */
+.p-getready__step::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 13px;
+  color: var(--color-primary-dark);
+}
+
+/* 駅間の縦線 */
+.p-getready__step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 18px;
+  bottom: -4px;
+  width: 2px;
+  background: var(--color-primary-dark);
+}
+
+.p-getready__step-station {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--color-primary-dark);
+}
+
+.p-getready__step-line {
+  font-size: 16px;
+  padding: 4px 0 8px;
 }

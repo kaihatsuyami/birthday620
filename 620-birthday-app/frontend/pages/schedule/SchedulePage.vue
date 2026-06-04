@@ -26,7 +26,7 @@ const goTo = (path) => {
 
 const schedule = [
   {
-    date: "6/20",
+    date: "Day1",
     items: [
       { time: "12:00", event: "start\n@Lounge in Hotel" },
       { time: "15:00", event: "checkin\n@Richmond Hotel Premier Schole" },
@@ -35,7 +35,7 @@ const schedule = [
     ],
   },
   {
-    date: "6/21",
+    date: "Day2",
     items: [
       { time: "11:00", event: "checkout" },
       { time: "11:30", event: "Lunch@secret..." },

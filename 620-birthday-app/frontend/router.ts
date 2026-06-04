@@ -42,15 +42,15 @@ const ticketRoutes = [
   { path: '/ticket/sanrio',
     name: 'ticket-sanrio',
     component: () => import('@/pages/ticket/TicketSanrioPage.vue'),
-    meta: { title: 'DAY2 TICKET', backTo: '/ticket/transport' } },
+    meta: { title: 'DAY2 TICKET', backTo: '/dashboard' } },
   { path: '/ticket/asakusa',
     name: 'ticket-asakusa',
     component: () => import('@/pages/ticket/TicketAsakusaPage.vue'),
-    meta: { title: 'DAY2 TICKET', backTo: '/ticket/weather' } },
+    meta: { title: 'DAY2 TICKET', backTo: '/dashboard' } },
   { path: '/ticket/aquarium',
     name: 'ticket-aquarium',
     component: () => import('@/pages/ticket/TicketAquariumPage.vue'),
-    meta: { title: 'DAY2 TICKET', backTo: '/ticket/weather' } },
+    meta: { title: 'DAY2 TICKET', backTo: '/dashboard' } },
 ]
 
 const router = createRouter({

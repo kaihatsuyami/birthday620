@@ -2,13 +2,23 @@
   <div>
     <AppHeader variant="ticket" />
 
-    <div class="p-sanrio">
+    <div class="p-ticket">
+      <div class="text" :class="{ 'is-active': isBaban }">Sanrio Puro Land</div>
       <div
-        class="kurukuru anim-box kiran"
-        :class="{ 'is-animated': isAnimated, 'is-kiran': isKiran }"
-        @click="onKiran"
+        class="kurukuru anim-box"
+        :class="{ 'is-animated': isAnimated }"
       >
-        <img src="@/assets/image/blue.png" class="kurukuru__img" alt="blue" />
+        <!-- カードフリップ -->
+        <div class="card" :class="{ 'is-flipped': isFlipped }" @click="onFlip">
+          <!-- 表: blue.png -->
+          <div class="card__face card__face--front kiran" :class="{ 'is-kiran': isKiran }">
+            <img src="@/assets/image/blue.png" class="card__img" alt="blue" />
+          </div>
+          <!-- 裏: peach.svg -->
+          <div class="card__face card__face--back">
+            <img src="@/assets/image/peach.svg" class="card__img" alt="peach" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -20,23 +30,33 @@ import AppHeader from "@/shared/AppHeader.vue";
 
 const isAnimated = ref(false);
 const isKiran = ref(false);
+const isFlipped = ref(false);
+const isBaban = ref(false);
 
 onMounted(() => {
   setTimeout(() => { isAnimated.value = true; }, 100);
+  setTimeout(() => {
+    isKiran.value = true;
+    setTimeout(() => { isKiran.value = false; }, 500);
+  }, 2900);
+  setTimeout(() => { isBaban.value = true; }, 3600);
+
+
 });
 
-const onKiran = () => {
-  if (isKiran.value) return;
-  isKiran.value = true;
-  setTimeout(() => { isKiran.value = false; }, 500);
+const onFlip = () => {
+  isFlipped.value = !isFlipped.value;
 };
 </script>
 
 <style scoped>
-.p-sanrio {
+.p-ticket {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-top: 40px;
+  align-items: center;
+  gap: 20px;
+  height: calc(100dvh - 120px); /* ヘッダー分を引く */
 }
 
 /* ---- くるくる出現 ---- */
@@ -47,35 +67,58 @@ const onKiran = () => {
 }
 
 .kurukuru.is-animated {
-  animation: kurukuru 1.4s ease-out forwards;
+  animation: kurukuru 2.8s ease-out forwards;
   opacity: 1;
 }
 
-.kurukuru__img {
+@keyframes kurukuru {
+  0% {
+    transform: rotateY(0) translateY(120px);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(720deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ---- カードフリップ ---- */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.card__img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-@keyframes kurukuru {
-  0% {
-    transform: rotateY(0) translateY(40px);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateY(360deg) translateY(0);
-    opacity: 1;
-  }
-}
-
 /* ---- キラっと光る ---- */
-.anim-box.kiran {
+.kiran {
   overflow: hidden;
   position: relative;
-  cursor: pointer;
 }
 
-.anim-box.kiran::before {
+.kiran::after {
   background-color: #fff;
   content: "";
   display: block;
@@ -85,9 +128,11 @@ const onKiran = () => {
   width: 30px;
   height: 100%;
   opacity: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.anim-box.kiran.is-kiran::before {
+.kiran.is-kiran::after {
   animation: kiran 0.5s linear;
 }
 
@@ -98,4 +143,33 @@ const onKiran = () => {
   80%  { transform: scale(45) rotate(45deg); opacity: 0.2; }
   100% { transform: scale(50) rotate(45deg); opacity: 0; }
 }
+.text {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--color-text-dark);
+  opacity: 0;
+  transform-origin: bottom;
+}
+
+.text.is-active {
+  animation: text08 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 1;
+}
+
+@keyframes text08 {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(150%);
+  }
+  30% {
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1.5) translateY(-30%);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
 </style>

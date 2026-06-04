@@ -1,1 +1,0 @@
-import{d as e,g as t,m as n}from"./index-DkbhrWVg.js";import{t as r}from"./AppHeader-JevN25uD.js";var i={__name:`TicketAsakusaPage`,setup(i){return(i,a)=>(t(),e(`div`,null,[n(r,{variant:`ticket`})]))}};export{i as default};
