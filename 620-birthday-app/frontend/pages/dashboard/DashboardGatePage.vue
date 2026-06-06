@@ -46,6 +46,8 @@ const onSubmit = async (password) => {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+
 .intro {
   position: fixed;
   inset: 0;
@@ -80,6 +82,7 @@ const onSubmit = async (password) => {
 
 .bg {
   text-align: center;
+  font-family: 'Cherry Swash', cursive;
 }
 
 .bg .bg-wrap {

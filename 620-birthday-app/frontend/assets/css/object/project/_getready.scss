@@ -11,7 +11,7 @@
   display: inline-block;
   margin: 14px 0 10px 22px;
   padding: 6px 16px 6px 12px;
-  font-family: Inter, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   font-size: 18px;
   font-weight: bold;
   background: var(--color-primary-dark);
@@ -51,15 +51,15 @@
     padding: 10px 0 10px 16px;
     border-bottom: 1px solid var(--color-primary-contrast);
 
-    &:last-child {
-      border-bottom: none;
-    }
+    // &:last-child {
+    //   border-bottom: none;
+    // }
   }
 }
 
 .p-getready__note {
   padding: 16px 20px;
-  border-top: 1px solid var(--color-primary-contrast);
+  // border-top: 1px solid var(--color-primary-contrast);
 
   p {
     font-size: 20px;
@@ -87,7 +87,7 @@
 
 .p-getready__route-label {
   font-size: 20px;
-  margin: 0 0 8px;
+  margin: 10px 0 8px;
 }
 
 .p-getready__steps {

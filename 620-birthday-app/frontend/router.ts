@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 /**
  * /schedule 配下のルート
@@ -7,23 +7,22 @@ const scheduleRoutes = [
   { path: '/schedule',
     name: 'schedule',
     component: () => import('@/pages/schedule/SchedulePage.vue'),
-    meta: { title: 'TIME SCHEDULE', backTo: '/dashboard' } },
+    meta: { title: 'SCHEDULE', backTo: '/dashboard' } },
   { path: '/schedule/gate',
     name: 'schedule-gate',
-    component: () => import('@/pages/schedule/ScheduleGatePage.vue'),
-    meta: { title: 'TIME SCHEDULE', backTo: '/schedule' } },
+    component: () => import('@/pages/schedule/ScheduleGatePage.vue') },
   { path: '/schedule/sanrio',
     name: 'schedule-sanrio',
     component: () => import('@/pages/schedule/ScheduleSanrioPage.vue'),
-    meta: { title: 'TIME SCHEDULE', backTo: '/dashboard' } },
+    meta: { title: 'SCHEDULE', backTo: '/dashboard' } },
   { path: '/schedule/asakusa',
     name: 'schedule-asakusa',
     component: () => import('@/pages/schedule/ScheduleAsakusaPage.vue'),
-    meta: { title: 'TIME SCHEDULE', backTo: '/dashboard' } },
+    meta: { title: 'SCHEDULE', backTo: '/dashboard' } },
   { path: '/schedule/aquarium',
     name: 'schedule-aquarium',
     component: () => import('@/pages/schedule/ScheduleAquariumPage.vue'),
-    meta: { title: 'TIME SCHEDULE', backTo: '/dashboard' } },
+    meta: { title: 'SCHEDULE', backTo: '/dashboard' } },
 ]
 
 /**
@@ -54,7 +53,7 @@ const ticketRoutes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/',
       redirect: '/gate' },

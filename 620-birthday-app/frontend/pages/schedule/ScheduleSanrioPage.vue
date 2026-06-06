@@ -3,15 +3,17 @@
     <AppHeader variant="schedule" />
 
     <ScheduleGroup
-      v-for="group in schedule"
+      v-for="(group, i) in schedule"
       :key="group.date"
       :date="group.date"
       :items="group.items"
+      :start-delay="groupStartDelays[i]"
     />
   </div>
 </template>
 
 <script setup>
+import { computed } from "vue";
 import AppHeader from "@/shared/AppHeader.vue";
 import ScheduleGroup from "./components/ScheduleGroup.vue";
 
@@ -37,4 +39,12 @@ const schedule = [
     ],
   },
 ];
+const groupStartDelays = computed(() => {
+  let delay = 100;
+  return schedule.map((group) => {
+    const start = delay;
+    delay += (group.items.length + 2) * 100;
+    return start;
+  });
+});
 </script>

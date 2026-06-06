@@ -1,0 +1,21 @@
+
+.anim-box.popup {
+  opacity: 0;
+  transform: translateY(40px) scale(0.8);
+}
+.anim-box.popup.is-animated {
+  animation: popup 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+ 
+@keyframes popup {
+  0% {
+    transform: translateY(40px) scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1.0);
+  }
+  80%, 100% {
+    opacity: 1;
+  }
+}

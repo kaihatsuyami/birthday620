@@ -61,4 +61,8 @@ const goTo = (path) => {
     transform: translateX(0);
   }
 }
+
+.p-dashboard {
+  overflow: hidden;
+}
 </style>

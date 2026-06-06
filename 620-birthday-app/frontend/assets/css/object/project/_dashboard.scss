@@ -1,6 +1,6 @@
 .p-dashboard {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
 }
@@ -8,7 +8,12 @@
 .p-dashboard__buttons {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  flex: 1;
+
+  .square-button {
+    flex: 1;
+    height: auto;
+  }
 }
 
 .p-dashboard__button--getready { background: var(--color-primary-dark); }
