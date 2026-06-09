@@ -1,0 +1,1 @@
+.anim-box.slidein[data-v-eca7c7ff]{opacity:0;transform:translate(180px)}.anim-box.slidein.is-animated[data-v-eca7c7ff]{animation:1s cubic-bezier(.25,1,.5,1) forwards slideIn-eca7c7ff}@keyframes slideIn-eca7c7ff{0%{opacity:0;transform:translate(180px)}40%,to{opacity:1}to{transform:translate(0)}}.p-dashboard[data-v-eca7c7ff]{overflow:hidden}
