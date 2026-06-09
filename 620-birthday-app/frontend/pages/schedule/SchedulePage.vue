@@ -33,7 +33,7 @@ const schedule = [
       { time: "12:00", event: "start\n@Lounge in Hotel" },
       { time: "15:00", event: "checkin\n@Richmond Hotel Premier Schole" },
       { time: "xx:xx", event: "Dinner\n＠Takeout or Delivery" },
-      { time: "xx:xx", event: "Nightcap\n＠Lounge" },
+      { time: "21:00", event: "Nightcap\n＠Lounge" },
     ],
   },
   {

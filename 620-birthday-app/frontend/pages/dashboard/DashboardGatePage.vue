@@ -106,7 +106,7 @@ const onSubmit = async (password) => {
 .bg .bg-wrap .inn {
   color: var(--color-primary-contrast);
   display: inline-block;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   padding: 3px 10px;
   position: relative;

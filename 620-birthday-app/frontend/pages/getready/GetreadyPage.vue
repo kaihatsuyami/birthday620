@@ -32,7 +32,8 @@
         </div>
         <p class="p-getready__block-title" style="margin-top: 24px">アクセス【車】</p>
         <ul class="p-getready__list">
-          <li>駐車場：ホテル建物内3・4階</li>
+          <li>駐車場：<br>
+          タイムズセントラルスクエア押上駅前店（ホテル建物内3・4階）</li>
         </ul>
         <div class="p-getready__routes">
           <div class="p-getready__route">
