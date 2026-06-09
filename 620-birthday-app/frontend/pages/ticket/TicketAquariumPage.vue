@@ -10,13 +10,13 @@
       >
         <!-- カードフリップ -->
         <div class="card" :class="{ 'is-flipped': isFlipped }" @click="onFlip">
-          <!-- 表: blue.png -->
+          <!-- 表: sumida.png -->
           <div class="card__face card__face--front kiran" :class="{ 'is-kiran': isKiran }">
-            <img src="@/assets/image/blue.png" class="card__img" alt="blue" />
+            <img src="@/assets/image/sumida.png" class="card__img" alt="sumida" />
           </div>
-          <!-- 裏: peach.svg -->
+          <!-- 裏: aquarium.png -->
           <div class="card__face card__face--back">
-            <img src="@/assets/image/peach.svg" class="card__img" alt="peach" />
+            <img src="@/assets/image/aquarium.png" class="card__img" alt="aquarium" />
           </div>
         </div>
       </div>
@@ -61,8 +61,8 @@ const onFlip = () => {
 
 /* ---- くるくる出現 ---- */
 .kurukuru {
-  width: 120px;
-  height: 120px;
+  width: 240px;
+  height: 240px;
   opacity: 0;
 }
 
@@ -115,7 +115,6 @@ const onFlip = () => {
 /* ---- キラっと光る ---- */
 .kiran {
   overflow: hidden;
-  position: relative;
 }
 
 .kiran::after {
