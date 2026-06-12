@@ -72,6 +72,9 @@
     </AccordionSection>
 
     <AccordionSection class="anim-box popup" :class="{ 'is-animated': isAnimated4 }" title="持ってきてほしいもの">
+      <div class="p-getready__note">
+        <p>検討中...更新するかもしれません！</p>
+      </div>
       <div class="p-getready__block">
         <p class="p-getready__block-title">共通</p>
         <ul class="p-getready__list">
@@ -162,8 +165,8 @@ const trainItems = [
   "歩きやすい靴",
 ]
 const shareItems = [
-  "ライター",
-
+  // "ライター",
+  
 ]
 
 const carRoute = [

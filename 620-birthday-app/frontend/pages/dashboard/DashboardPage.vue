@@ -4,11 +4,9 @@
     <div class="p-dashboard__buttons">
       <SquareButton class="p-dashboard__button--getready anim-box slidein" :class="{ 'is-animated': isAnimated2 }" @click="goTo('/getready')">GET READY</SquareButton>
       <SquareButton class="p-dashboard__button--schedule anim-box slidein" :class="{ 'is-animated': isAnimated3 }" @click="goTo('/schedule')">SCHEDULE</SquareButton>
-      <SquareButton class="p-dashboard__button--ticket anim-box slidein" :class="{ 'is-animated': isAnimated4 }" @click="goTo('/ticket')">DAY2 TICKET</SquareButton>
-      <!-- <SquareButton class="p-dashboard__button--other anim-box slidein" :class="{ 'is-animated': isAnimated5 }" @click="goTo('/other')">OTHER</SquareButton> -->
-      <!-- <SquareButton class="p-dashboard__button--schedule anim-box slidein" coming-soon :class="{ 'is-animated': isAnimated3 }" @click="goTo('/schedule')">SCHEDULE</SquareButton> -->
-      <!-- <SquareButton class="p-dashboard__button--ticket anim-box slidein" coming-soon :class="{ 'is-animated': isAnimated4 }" @click="goTo('/ticket')">DAY2 TICKET</SquareButton> -->
-      <SquareButton class="p-dashboard__button--other anim-box slidein" coming-soon :class="{ 'is-animated': isAnimated5 }" @click="goTo('/other')">OTHER</SquareButton>
+      <!-- <SquareButton class="p-dashboard__button--ticket anim-box slidein" :class="{ 'is-animated': isAnimated4 }" @click="goTo('/ticket')">DAY2 TICKET</SquareButton> -->
+      <SquareButton class="p-dashboard__button--ticket anim-box slidein" coming-soon :class="{ 'is-animated': isAnimated4 }" @click="goTo('/ticket')">DAY2 TICKET</SquareButton>
+      <SquareButton class="p-dashboard__button--other anim-box slidein" :class="{ 'is-animated': isAnimated5 }" @click="goTo('/other')">OTHER</SquareButton>
       
     </div>
   </div>

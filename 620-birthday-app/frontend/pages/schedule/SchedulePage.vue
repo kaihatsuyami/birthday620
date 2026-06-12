@@ -30,17 +30,17 @@ const schedule = [
   {
     date: "Day1",
     items: [
-      { time: "12:00", event: "start\n@Lounge in Hotel" },
-      { time: "15:00", event: "checkin\n@Richmond Hotel Premier Schole" },
+      { time: "15:00", event: "start / checkin\n＠Richmond Hotel Premier Schole" },
       { time: "xx:xx", event: "Dinner\n＠Takeout or Delivery" },
       { time: "21:00", event: "Nightcap\n＠Lounge" },
+      { time: "22:00", event: "The illumination of Tokyo Skytree\n＠Hotel 6th floor" },
     ],
   },
   {
     date: "Day2",
     items: [
       { time: "11:00", event: "checkout" },
-      { time: "11:30", event: "Lunch@secret..." },
+      { time: "11:30", event: "Lunch\n＠secret..." },
     ],
   },
 ];

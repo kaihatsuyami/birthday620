@@ -24,7 +24,7 @@ const errorMessage = ref("");
 
 const destinations = {
   kuromi: "/schedule/sanrio",
-  kaminari: "/schedule/asakusa",
+  asakusa: "/schedule/asakusa",
   aquarium: "/schedule/aquarium",
 };
 

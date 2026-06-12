@@ -21,8 +21,7 @@ const schedule = [
   {
     date: "Day1",
     items: [
-      { time: "12:00", event: "start\n@Lounge" },
-      { time: "15:00", event: "checkin\n@Richmond Hotel Premier Schole" },
+      { time: "15:00", event: "checkin\n＠Richmond Hotel Premier Schole" },
       { time: "xx:xx", event: "Dinner\n＠Takeout or Delivery" },
       { time: "21:00", event: "Nightcap\n＠Lounge" },
     ],
@@ -31,7 +30,7 @@ const schedule = [
     date: "Day2",
     items: [
       { time: "11:00", event: "checkout" },
-      { time: "11:30", event: "Lunch@sorairo" },
+      { time: "11:30", event: "Lunch\n＠sorairo" },
       { time: "13:00", event: "Asakusa Sightseeing" },
       { time: "18:00", event: "Enter Skytree" },
       { time: "19:00", event: "Sunset" },
