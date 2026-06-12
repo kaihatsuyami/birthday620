@@ -2,7 +2,7 @@
   <div>
     <AppHeader variant="other" />
     <div class="white-box anim-box zoomin" :class="{ 'is-animated': isAnimated }">
-    <p>Otherページ作ってみたけど<br>その他コンテンツ特になかったです、！<br>楽しんでもらえるように<br>いろいろ考えましたっ<br>あんまり気負わず、気楽に来てね<br>素敵な誕生日になるといいな<br>当日楽しみにしてます❤</p>
+    <p>Otherページ作ってみたけど<br>その他コンテンツ特になかったです、！<br>楽しんでもらえるように<br>いろいろ考えましたっ<br>あんまり気負わず、気楽に来てね<br>素敵な誕生日になるといいな<br>当日楽しみにしてます♡</p>
     </div>
   </div>
 </template>
