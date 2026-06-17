@@ -31,7 +31,6 @@ body {
   background: var(--color-bg);
 
   /* 横はみ出し防止 */
-  overflow-x: hidden;
   overflow-wrap: break-word;
 
   /* 重要：100vh問題対策 */

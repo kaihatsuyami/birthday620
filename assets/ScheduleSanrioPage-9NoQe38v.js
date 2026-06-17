@@ -1,4 +1,4 @@
-import{a as e,g as t,h as n,o as r,p as i,u as a}from"./index-DDOxfLRp.js";import{t as o}from"./AppHeader-UqhgkkIz.js";import{t as s}from"./ScheduleGroup-BodTcaJN.js";var c={class:`p-schedule`},l={__name:`ScheduleSanrioPage`,setup(l){let u=[{date:`Day1`,items:[{time:`15:00`,event:`checkin
+import{a as e,g as t,h as n,o as r,p as i,u as a}from"./index-C_C7sPGH.js";import{t as o}from"./AppHeader-db-u_w0v.js";import{t as s}from"./ScheduleGroup-COT4GdVM.js";var c={class:`p-schedule`},l={__name:`ScheduleSanrioPage`,setup(l){let u=[{date:`Day1`,items:[{time:`15:00`,event:`checkin
 ＠Richmond Hotel Premier Schole`},{time:`xx:xx`,event:`Dinner
 ＠Takeout or Delivery`},{time:`21:00`,event:`Nightcap
 ＠Lounge`}]},{date:`Day2`,items:[{time:`11:00`,event:`checkout`},{time:`11:30`,event:`Lunch
