@@ -24,6 +24,7 @@ const schedule = [
       { time: "15:00", event: "checkin\n＠Richmond Hotel Premier Schole" },
       { time: "xx:xx", event: "Dinner\n＠Takeout or Delivery" },
       { time: "21:00", event: "Nightcap\n＠Lounge" },
+      { time: "22:00", event: "The illumination of Tokyo Skytree\n＠Hotel 6th floor" },
     ],
   },
   {

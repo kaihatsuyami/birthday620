@@ -3,7 +3,7 @@
     <AppHeader variant="ticket" />
 
     <div class="p-ticket">
-      <div class="text" :class="{ 'is-active': isBaban }">浅草<br>Sky Tree</div>
+      <div class="text" :class="{ 'is-active': isBaban }">Asakusa<br>SKYTREE</div>
       <div
         class="kurukuru anim-box"
         :class="{ 'is-animated': isAnimated }"
